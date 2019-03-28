@@ -7,8 +7,8 @@ explanationHTML = open("templates/explanation.html","r").read()
 connectUser = ""
 
 app = Flask(__name__)
-#app.config['SECRET_KEY'] = 'vnkdjrtnfjknfl1232#'
-#socketio = SocketIO(app)
+app.config['SECRET_KEY'] = 'vnkdjrtnfjknfl1232#'
+socketio = SocketIO(app)
 
 @app.route('/')
 def sessions():
@@ -50,5 +50,5 @@ def handle_my_custom_event(okok):
 		socketio.emit('answerOfConnect',False,room = request.sid)
 '''
 if __name__ == '__main__':
-	app.run(debug=True, host='0.0.0.0', port=5000)
+	socketio.run(debug=True, host='0.0.0.0', port=5000)
 print(passwordTxt)
