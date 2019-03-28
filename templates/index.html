@@ -139,6 +139,7 @@
       			socket.on('answerOfConnect',(answerOfConnect)=>{
       				if(answerOfConnect==false){
       					$('#submit').on('click',(e)=>{
+      						console.log("okko")
 				          	let password = $( 'input.password' ).val()
 				          	socket.emit('reviewOfPasswrd',password)
 				          	socket.on( 'answerOfPasswrd',(answerOfPasswrd)=>{
