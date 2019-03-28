@@ -1,5 +1,5 @@
 from flask import Flask, render_template,request, send_file
-#from flask_socketio import SocketIO
+from flask_socketio import SocketIO
 
 passwordTxt = open("password.txt", "r").read()
 controllPanelHTML = open("templates/controllPanel.html","r").read()
@@ -12,8 +12,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def sessions():
-	return "okokokok"
-	#return render_template('index.html')
+	#return "okokokok"
+	return render_template('index.html')
 '''
 @app.route('/ArTarumianBarak-Regular-8925.ttf')
 def sendingFuckinFile():
