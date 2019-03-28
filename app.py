@@ -1,11 +1,11 @@
 from flask import Flask, render_template,request, send_file
 #from flask_socketio import SocketIO
 
-'''passwordTxt = open("password.txt", "r").read()
+passwordTxt = open("password.txt", "r").read()
 controllPanelHTML = open("templates/controllPanel.html","r").read()
 explanationHTML = open("templates/explanation.html","r").read()
 connectUser = ""
-'''
+
 app = Flask(__name__)
 #app.config['SECRET_KEY'] = 'vnkdjrtnfjknfl1232#'
 #socketio = SocketIO(app)
