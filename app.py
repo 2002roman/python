@@ -48,6 +48,7 @@ def handle_my_custom_event(okok):
 		socketio.emit('answerOfConnect',explanationHTML,room = request.sid)
 	else:
 		socketio.emit('answerOfConnect',False,room = request.sid)
+	print("connected")
 
 if __name__ == '__main__':
 	socketio.run(debug=True, host='0.0.0.0', port=5000)
