@@ -28,7 +28,7 @@ def sendingFuckinFile3():
 
 @socketio.on('connect')
 def hiToConnected():
-	print("connected user")
+	print(request.sid)
 
 @socketio.on('reviewOfPasswrd')
 def handle_my_custom_event(passwordS):
