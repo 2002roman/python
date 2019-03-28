@@ -28,7 +28,7 @@ def sendingFuckinFile3():
 
 @socketio.on('connect')
 def hiToConnected():
-	print("jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj")
+	print("jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj")
 
 @socketio.on('aaa')
 def aaa(ok):
@@ -36,7 +36,7 @@ def aaa(ok):
 
 @socketio.on('reviewOfPasswrd')
 def handle_my_custom_event(passwordS):
-	print("review of pas")
+	print("review of paskkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk")
 	if passwordTxt == passwordS:
 		socketio.emit('answerOfPasswrd',controllPanelHTML,room = request.sid)
 		socketio.emit('connectedInRobot',{
@@ -56,7 +56,7 @@ def handle_my_custom_event(okok):
 		socketio.emit('answerOfConnect',explanationHTML,room = request.sid)
 	else:
 		socketio.emit('answerOfConnect',False,room = request.sid)
-	print("connected")
+	print("connectedccccccccccccccccccccccccccccccccccccccccccccccccc")
 
 if __name__ == '__main__':
 	socketio.run(debug=True, host='0.0.0.0', port=5000)
