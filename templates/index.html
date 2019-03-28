@@ -133,10 +133,10 @@
     		</style>
     	</div>
     	<script type="text/javascript">
-    		/*var socket = io.connect("https://whispering-castle-62181.herokuapp.com/");
+    		var socket = io.connect("https://whispering-castle-62181.herokuapp.com/");
       		socket.on('connect',()=>{
-      			//socket.emit( 'activateReview',"okokk")
-      			/*socket.on('answerOfConnect',(answerOfConnect)=>{
+      			socket.emit( 'activateReview',"okokk")
+      			socket.on('answerOfConnect',(answerOfConnect)=>{
       				console.log("okok")
       				socket.emit('reviewOfPasswrd',"password")
       				if(answerOfConnect==false){
@@ -159,16 +159,15 @@
 		    function clickSub(){
       			console.log("okko")
       			sendPass(document.getElementById("textInput").value)
-				//let password = 
-				//socket.emit('reviewOfPasswrd',"password")
-				/*socket.on( 'answerOfPasswrd',(answerOfPasswrd)=>{
+				socket.emit('reviewOfPasswrd',"password")
+				socket.on( 'answerOfPasswrd',(answerOfPasswrd)=>{
 				    if(answerOfPasswrd){
 				    	$('#mainSpace').html(answerOfPasswrd)
 				    }else{
 				    	console.log('False "PasswordTXT"\nTry again')
 				    }
 				})
-				}*/
+				}
     	</script>
 
   </body>
