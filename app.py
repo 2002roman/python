@@ -26,6 +26,10 @@ def sendingFuckinFile2():
 def sendingFuckinFile3():
 	return send_file("logo.png", mimetype='image/gif')
 
+@socketio.on('connect')
+def ok():
+	print("connecetedeth")
+
 @socketio.on('reviewOfPasswrd')
 def handle_my_custom_event(passwordS):
 	if passwordTxt == passwordS:
