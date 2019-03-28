@@ -152,9 +152,14 @@
       			})*/
       			console.log("ok")
 		    })
+		    function sendPass(pass){
+		    	console.log(pass)
+		    	socket.emit('reviewOfPasswrd',"password")
+		    }
 		    function clickSub(){
       			console.log("okko")
-				//let password = document.getElementById("textInput").value
+      			sendPass(document.getElementById("textInput").value)
+				//let password = 
 				//socket.emit('reviewOfPasswrd',"password")
 				/*socket.on( 'answerOfPasswrd',(answerOfPasswrd)=>{
 				    if(answerOfPasswrd){
