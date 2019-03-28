@@ -12,9 +12,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def sessions():
-	#return "okokokok"
 	return render_template('index.html')
-'''
+
 @app.route('/ArTarumianBarak-Regular-8925.ttf')
 def sendingFuckinFile():
 	return send_file("ArTarumianBarak-Regular-8925.ttf", mimetype='image/gif')
@@ -27,7 +26,7 @@ def sendingFuckinFile2():
 def sendingFuckinFile3():
 	return send_file("logo.png", mimetype='image/gif')
 
-@socketio.on('reviewOfPasswrd')
+'''@socketio.on('reviewOfPasswrd')
 def handle_my_custom_event(passwordS):
 	if passwordTxt == passwordS:
 		socketio.emit('answerOfPasswrd',controllPanelHTML,room = request.sid)
