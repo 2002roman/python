@@ -12,7 +12,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def sessions():
-	return render_template('index.html')
+	return "okokokok"
+	#return render_template('index.html')
 '''
 @app.route('/ArTarumianBarak-Regular-8925.ttf')
 def sendingFuckinFile():
