@@ -1,1 +1,1 @@
-web: flask run --host=87.241.134.241
+web: flask run --host=0.0.0.0
