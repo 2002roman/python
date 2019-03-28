@@ -1,14 +1,14 @@
 from flask import Flask, render_template,request, send_file
-from flask_socketio import SocketIO
+#from flask_socketio import SocketIO
 
-passwordTxt = open("password.txt", "r").read()
+'''passwordTxt = open("password.txt", "r").read()
 controllPanelHTML = open("templates/controllPanel.html","r").read()
 explanationHTML = open("templates/explanation.html","r").read()
 connectUser = ""
-
+'''
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'vnkdjrtnfjknfl1232#'
-socketio = SocketIO(app)
+#app.config['SECRET_KEY'] = 'vnkdjrtnfjknfl1232#'
+#socketio = SocketIO(app)
 
 @app.route('/')
 def sessions():
@@ -25,7 +25,7 @@ def sendingFuckinFile2():
 @app.route('/logo.png')
 def sendingFuckinFile3():
 	return send_file("logo.png", mimetype='image/gif')
-
+'''
 @socketio.on('reviewOfPasswrd')
 def handle_my_custom_event(passwordS):
 	if passwordTxt == passwordS:
@@ -48,6 +48,6 @@ def handle_my_custom_event(okok):
 		socketio.emit('answerOfConnect',explanationHTML,room = request.sid)
 	else:
 		socketio.emit('answerOfConnect',False,room = request.sid)
-		
+'''
 if __name__ == '__main__':
 	socketio.run(app, debug=True)
