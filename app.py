@@ -32,6 +32,7 @@ def ok():
 
 @socketio.on('reviewOfPasswrd')
 def handle_my_custom_event(passwordS):
+	print("review of pas")
 	if passwordTxt == passwordS:
 		socketio.emit('answerOfPasswrd',controllPanelHTML,room = request.sid)
 		socketio.emit('connectedInRobot',{
