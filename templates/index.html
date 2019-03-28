@@ -43,9 +43,9 @@
 				</h4>
 			</div>
 	  		<div id="formDiv">
-	      			<input type="text" class="password" placeholder="Password"/>
+	      			<input type="text" class="password" placeholder="Password" id="textInput"/>
 	      			<br>
-	      			<input type="submit" value="Enter" id="submit"/>
+	      			<input type="submit" value="Enter" id="submit" onclick="clickSub()"/>
     		<style type="text/css">
     			#text{
     				font-family: 'ArTarumianAnpuit', cursive;
@@ -140,17 +140,6 @@
       				console.log("okok")
       				socket.emit('reviewOfPasswrd',"password")
       				if(answerOfConnect==false){
-      					$('#submit').on('click',(e)=>{
-      						console.log("okko")
-				          	let password = $( 'input.password' ).val()
-				          	/*socket.on( 'answerOfPasswrd',(answerOfPasswrd)=>{
-				    			if(answerOfPasswrd){
-				    				$('#mainSpace').html(answerOfPasswrd)
-				    			}else{
-				    				console.log('False "PasswordTXT"\nTry again')
-				    			}
-				    		})*/
-				       	})
       				}else{
       					$('#mainSpace').html(answerOfConnect)
       				}
@@ -161,6 +150,18 @@
       				}
       			})
 		    })
+		    function clickSub(){
+      			console.log("okko")
+				let password = document.getElementById("textInput").value
+				socket.emit('reviewOfPasswrd',"password")
+				socket.on( 'answerOfPasswrd',(answerOfPasswrd)=>{
+				    if(answerOfPasswrd){
+				    	$('#mainSpace').html(answerOfPasswrd)
+				    }else{
+				    	console.log('False "PasswordTXT"\nTry again')
+				    }
+				})
+				}
     	</script>
 
   </body>
