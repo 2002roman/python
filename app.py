@@ -26,7 +26,7 @@ def sendingFuckinFile2():
 def sendingFuckinFile3():
 	return send_file("logo.png", mimetype='image/gif')
 
-'''@socketio.on('reviewOfPasswrd')
+@socketio.on('reviewOfPasswrd')
 def handle_my_custom_event(passwordS):
 	if passwordTxt == passwordS:
 		socketio.emit('answerOfPasswrd',controllPanelHTML,room = request.sid)
@@ -48,7 +48,7 @@ def handle_my_custom_event(okok):
 		socketio.emit('answerOfConnect',explanationHTML,room = request.sid)
 	else:
 		socketio.emit('answerOfConnect',False,room = request.sid)
-'''
+
 if __name__ == '__main__':
 	socketio.run(debug=True, host='0.0.0.0', port=5000)
 print(passwordTxt)
