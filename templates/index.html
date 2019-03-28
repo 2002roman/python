@@ -135,11 +135,12 @@
     	<script type="text/javascript">
     		var socket = io.connect();
       		socket.on('connect',()=>{
-      			socket.emit( 'activateReview',"okokk")
-      			socket.on('answerOfConnect',(answerOfConnect)=>{
+      			//socket.emit( 'activateReview',"okokk")
+      			/*socket.on('answerOfConnect',(answerOfConnect)=>{
       				console.log("okok")
       				socket.emit('reviewOfPasswrd',"password")
       				if(answerOfConnect==false){
+      				
       				}else{
       					$('#mainSpace').html(answerOfConnect)
       				}
@@ -148,19 +149,20 @@
       				if(!(obj.id==socket.id)){
       					$('#mainSpace').html(obj.text)
       				}
-      			})
+      			})*/
+      			console.log("ok")
 		    })
 		    function clickSub(){
       			console.log("okko")
-				let password = document.getElementById("textInput").value
-				socket.emit('reviewOfPasswrd',"password")
-				socket.on( 'answerOfPasswrd',(answerOfPasswrd)=>{
+				//let password = document.getElementById("textInput").value
+				//socket.emit('reviewOfPasswrd',"password")
+				/*socket.on( 'answerOfPasswrd',(answerOfPasswrd)=>{
 				    if(answerOfPasswrd){
 				    	$('#mainSpace').html(answerOfPasswrd)
 				    }else{
 				    	console.log('False "PasswordTXT"\nTry again')
 				    }
-				})
+				})*/
 				}
     	</script>
 
