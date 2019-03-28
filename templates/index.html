@@ -137,8 +137,8 @@
     	<script type="text/javascript">
     		var socket = io.connect('https://' + document.domain + ':' + location.port);
       		socket.on('connect',()=>{
-      			socket.emit( 'activateReview',"okokk")
-      			socket.on('answerOfConnect',(answerOfConnect)=>{
+      			//socket.emit( 'activateReview',"okokk")
+      			/*socket.on('answerOfConnect',(answerOfConnect)=>{
       				if(answerOfConnect==false){
       					$('form').on('submit',(e)=>{
 				         	e.preventDefault()
@@ -160,7 +160,7 @@
       				if(!(obj.id==socket.id)){
       					$('#mainSpace').html(obj.text)
       				}
-      			})
+      			})*/
 		    })
     	</script>
 

@@ -29,7 +29,7 @@ def sendingFuckinFile3():
 @socketio.on('connect')
 def ok():
 	print("connecetedeth")
-
+'''
 @socketio.on('reviewOfPasswrd')
 def handle_my_custom_event(passwordS):
 	print("review of pas")
@@ -54,7 +54,7 @@ def handle_my_custom_event(okok):
 	else:
 		socketio.emit('answerOfConnect',False,room = request.sid)
 	print("connected")
-
+'''
 if __name__ == '__main__':
 	socketio.run(debug=True, host='0.0.0.0', port=5000)
 print(passwordTxt)
