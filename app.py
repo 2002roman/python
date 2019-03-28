@@ -30,6 +30,10 @@ def sendingFuckinFile3():
 def hiToConnected():
 	print(request.sid)
 
+@socketio.on('aaa')
+def aaa(ok):
+	print(ok)
+
 @socketio.on('reviewOfPasswrd')
 def handle_my_custom_event(passwordS):
 	print("review of pas")
