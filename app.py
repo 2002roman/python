@@ -28,7 +28,7 @@ def sendingFuckinFile3():
 
 @socketio.on('connect')
 def hiToConnected():
-	print(request.sid)
+	print("jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj")
 
 @socketio.on('aaa')
 def aaa(ok):
