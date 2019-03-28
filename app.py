@@ -27,9 +27,9 @@ def sendingFuckinFile3():
 	return send_file("logo.png", mimetype='image/gif')
 
 @socketio.on('connect')
-def ok():
-	print("connecetedeth")
-'''
+def hiToConnected():
+	print("connected user")
+
 @socketio.on('reviewOfPasswrd')
 def handle_my_custom_event(passwordS):
 	print("review of pas")
@@ -48,12 +48,11 @@ def handle_my_custom_event(passwordS):
 
 @socketio.on('activateReview')
 def handle_my_custom_event(okok):
-	print(connectUser)
 	if connectUser != "":
 		socketio.emit('answerOfConnect',explanationHTML,room = request.sid)
 	else:
 		socketio.emit('answerOfConnect',False,room = request.sid)
 	print("connected")
-'''
+
 if __name__ == '__main__':
 	socketio.run(debug=True, host='0.0.0.0', port=5000)

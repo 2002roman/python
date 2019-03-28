@@ -43,11 +43,9 @@
 				</h4>
 			</div>
 	  		<div id="formDiv">
-	    		<form action="" method="">
 	      			<input type="text" class="password" placeholder="Password"/>
 	      			<br>
-	      			<input type="submit" value="Enter"/>
-	    		</form>
+	      			<input type="submit" value="Enter" id="submit"/>
     		<style type="text/css">
     			#text{
     				font-family: 'ArTarumianAnpuit', cursive;
@@ -137,11 +135,10 @@
     	<script type="text/javascript">
     		var socket = io.connect();
       		socket.on('connect',()=>{
-      			//socket.emit( 'activateReview',"okokk")
-      			/*socket.on('answerOfConnect',(answerOfConnect)=>{
+      			socket.emit( 'activateReview',"okokk")
+      			socket.on('answerOfConnect',(answerOfConnect)=>{
       				if(answerOfConnect==false){
-      					$('form').on('submit',(e)=>{
-				         	e.preventDefault()
+      					$('#submit').on('click',(e)=>{
 				          	let password = $( 'input.password' ).val()
 				          	socket.emit('reviewOfPasswrd',password)
 				          	socket.on( 'answerOfPasswrd',(answerOfPasswrd)=>{
@@ -160,7 +157,7 @@
       				if(!(obj.id==socket.id)){
       					$('#mainSpace').html(obj.text)
       				}
-      			})*/
+      			})
 		    })
     	</script>
 
