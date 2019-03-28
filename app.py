@@ -1,5 +1,5 @@
 from flask import Flask, render_template,request, send_file
-from flask.ext.socketio import SocketIO
+from flask_socketio import SocketIO
 
 passwordTxt = open("password.txt", "r").read()
 controllPanelHTML = open("templates/controllPanel.html","r").read()
