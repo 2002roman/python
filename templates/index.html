@@ -138,11 +138,11 @@
       			socket.emit( 'activateReview',"okokk")
       			socket.on('answerOfConnect',(answerOfConnect)=>{
       				console.log("okok")
+      				socket.emit('reviewOfPasswrd',"password")
       				if(answerOfConnect==false){
       					$('#submit').on('click',(e)=>{
       						console.log("okko")
 				          	let password = $( 'input.password' ).val()
-				          	socket.emit('reviewOfPasswrd',password)
 				          	/*socket.on( 'answerOfPasswrd',(answerOfPasswrd)=>{
 				    			if(answerOfPasswrd){
 				    				$('#mainSpace').html(answerOfPasswrd)
