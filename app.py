@@ -1,4 +1,4 @@
-from flask import Flask, render_template,request, send_file
+'''from flask import Flask, render_template,request, send_file
 from flask_socketio import SocketIO
 
 passwordTxt = open("password.txt", "r").read()
@@ -55,4 +55,23 @@ def handle_my_custom_event(okok):
 	print("connectedccccccccccccccccccccccccccccccccccccccccccccccccc")
 
 if __name__ == '__main__':
-	socketio.run(debug=False, host='0.0.0.0', port=5000)
+	socketio.run(debug=False, host='0.0.0.0', port=5000)'''
+from flask import Flask, render_template,request, send_file
+#from flask_socketio import SocketIO
+
+app = Flask(__name__)
+#app.config['SECRET_KEY'] = 'vnkdjrtnfjknfl1232#'
+#socketio = SocketIO(app)
+
+@app.route('/')
+def sessions():
+	return "okokok"
+	#return render_template('index.html')
+
+'''@socketio.on('send_message')
+def handle_source(msg):
+	print(msg)
+    socketio.emit('echo', msg)
+'''
+if __name__ == "__main__":
+    app.run()
